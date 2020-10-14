@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Dylan's Minesweeper</title>
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <div class="menu">
+      <div class="menuButton" data-size="8x10"></div>
+      <div class="menuButton" data-size="14x18"></div>
+      <div class="menuButton" data-size="20x24"></div>
+    </div>
+    <div class="gridwrapper">
+      <div class="grid"></div>
+    </div>
+    <div class="status">Time: <span class="timer">0</span> seconds</div>
+    <div id="overlay" class ="overlay">
+      <div id="overlayin">
+        <p class="big glow">Congratulations, you won!!!</p>
+        <p class="darker">
+          It took you <span class="timer">0</span> seconds.
+        </p>
+        <p class="darker">Click anywhere to start a new game.</p>
+      </div>
+    </div>
+    <div id="overlayLose" class="overlay">
+      <div id="overlayOther">
+        <p class="big glow">Uh Oh!!! You lost :(</p>
+        <p class="darker">
+          It took you <span class="timer">0</span> seconds.
+        </p>
+        <p class="darker">Click anywhere to start a new game.</p>
+      </div>
+    </div>
+    <script src="msgame.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>
