@@ -1,3 +1,8 @@
+// This code was copied with permission from https://repl.it/@pfederl/Minesweeper-Game-Engine.
+
+// Nothing in this file has been changed.
+
+
 "use strict";
 
 let MSGame = (function ()
