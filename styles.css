@@ -31,6 +31,12 @@ body {
   }
 }
 
+@media only screen and (orientation: landscape) {
+  .grid {
+    max-width: 800px;
+  }
+}
+
 .card.hidden {
   background-color: lawngreen;
   background-repeat: no-repeat;
