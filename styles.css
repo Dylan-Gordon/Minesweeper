@@ -25,6 +25,12 @@ body {
   animation-fill-mode: forwards;
 }
 
+@media only screen and (max-width: 768px) {
+  .card {
+    font-size: 0.5em;
+  }
+}
+
 .card.hidden {
   background-color: lawngreen;
   background-repeat: no-repeat;
