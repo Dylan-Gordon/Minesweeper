@@ -99,10 +99,19 @@ function render(game)
             card.classList.remove("uncoveredMine");
 
             card.classList.add("uncovered");
-            card.textContent = currentState[row][col];
+            if (currentState[row][col] == "0")
+            {
+               card.textContent = "";
+            }
+            else 
+            {
+               card.textContent = currentState[row][col];
+            }
          }
       }
    }
+
+   document.getElementById("mineCount").textContent = game.getStatus().nmarked;
 }
 
 /**
@@ -180,6 +189,11 @@ function button_cb(game, cols, rows, timer)
    game.init(rows, cols, nMines);
    render(game);
 
+   startTimer(timer);
+}
+
+function startTimer(timer)
+{
    timer.startTime = new Date().getTime();
 
    // Timer functions
@@ -236,6 +250,7 @@ function main()
             overlay.classList.remove("active");
             game.init(game.getStatus().nrows, game.getStatus().ncols, game.getStatus().nmines);
             render(game);
+            startTimer(timer);
          }
       });
    });
